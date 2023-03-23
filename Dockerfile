@@ -20,4 +20,5 @@ RUN source genderapp/bin/activate
 RUN python -m pip install --upgrade pip
 
 # Define the entry point for the container
-CMD ["python", "main.py"]
+# CMD ["python", "main.py"]
+CMD ["flask", "run", "--host=0.0.0.0"]
