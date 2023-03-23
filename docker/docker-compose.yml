@@ -3,7 +3,7 @@ version: "3.9"
 services:
   ml_flask:
     build:
-      context: "../../ML_FLAK_APP"
+      context: "../../ML_FLASK_APP"
       dockerfile: "docker/Dockerfile"
     volumes:
       - ../../ML_FLAK_APP:/app
