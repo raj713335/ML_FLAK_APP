@@ -10,3 +10,9 @@ $ pip install -r requirements.txt
 $ python main.py
 ```
 
+## 2. Deploy in heroku
+
+```
+pip freeze > requirements.txt
+```
+
