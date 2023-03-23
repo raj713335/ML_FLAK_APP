@@ -8,10 +8,10 @@ WORKDIR /
 COPY . /
 
 # Creating Virtual Enviroment
-RUN pip install virtualenv
-RUN virtualenv genderapp
-RUN virtualenv -p /usr/bin/python3 genderapp
-RUN source genderapp/bin/activate
+# RUN pip install virtualenv
+# RUN virtualenv genderapp
+# RUN virtualenv -p /usr/bin/python3 genderapp
+# RUN source genderapp/bin/activate
 
 
 
