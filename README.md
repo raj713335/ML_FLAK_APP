@@ -1,4 +1,4 @@
-# ML FLAK APP
+# ML FLASK APP
 
 ## 1. Getting Started With The Application
 
