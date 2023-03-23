@@ -1,24 +1,15 @@
-# Use the official Python image as the base image
-FROM python:3.10.5
+FROM python:3-alpine
 
-# Set the working directory in the container
-WORKDIR /
+# Create app directory
+WORKDIR /app
 
-# Copy the application files into the working directory
-COPY . /
+# Install app dependencies
+COPY requirements.txt ./
 
-# Creating Virtual Enviroment
-# RUN pip install virtualenv
-# RUN virtualenv genderapp
-# RUN virtualenv -p /usr/bin/python3 genderapp
-# RUN source genderapp/bin/activate
-
-
-
-# Install the application dependencies
-RUN python -m pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# Define the entry point for the container
-# CMD ["python", "main.py"]
-CMD ["flask", "run", "--host=0.0.0.0"]
+# Bundle app source
+COPY . .
+
+EXPOSE 5000
+CMD [ "flask", "run","--host","0.0.0.0","--port","5000"]
