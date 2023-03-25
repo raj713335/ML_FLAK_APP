@@ -3,10 +3,10 @@ version: "3.9"
 services:
   ml_flask:
     build:
-      context: "../../ML_FLASK_APP"
-      dockerfile: "Dockerfile"
+      context: "../ML_FLASK_APP"
+
     volumes:
-      - ../../ML_FLAK_APP:/app
+      - ../ML_FLAK_APP:/app
     stdin_open: true
     tty: true
     ports:
